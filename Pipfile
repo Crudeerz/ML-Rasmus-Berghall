@@ -11,6 +11,7 @@ matplotlib = "*"
 ipykernel = "*"
 pyarrow = "*"
 scipy = "*"
+scikit-learn = "*"
 
 [dev-packages]
 
