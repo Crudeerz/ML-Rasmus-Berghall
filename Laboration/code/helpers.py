@@ -1,6 +1,3 @@
-import pandas as pd
-
-
 
 def rename_columns(df):
     """
@@ -20,7 +17,7 @@ def rename_columns(df):
     return df
 
 
-def transform_bmi(BMI):
+def categorical_bmi(BMI):
     """
     Returns BMI category represented with numbers: 
 
@@ -33,19 +30,43 @@ def transform_bmi(BMI):
     
     """
     if BMI <= 18.4:
-        return 0
+        return "Underweight"
     elif 18.5 <= BMI <= 24.9:
-        return 1
+        return "Normal"
     elif 25.0 <= BMI <= 29.9:
-        return 2
+        return "Overweight"
     elif 30.0 <= BMI <= 34.9:
-        return 3
+        return "Obese 1"
     elif 35.0 <= BMI <= 39.9:
-        return 4
+        return "Obese 2"
     elif BMI >= 40.0:
-        return 5
+        return "Obese 3"
+    else: 
+        return "Fault"
     
 
-def transform_bloodpressure():
-    ...
+def categorical_bloodpressure(df):
+    """
+    Returns categorical bloddpressure based on ap_hi and ap_lo in dataframe
+
+    Parameters: df = pd.DataFrame
+
+    Normal: ap_hi <= 120 & ap_lo <= 80,
+    Elevated: 121 < ap_hi <= 129 & ap_lo <= 80,
+    Hypertension 1: 130 < ap_hi <= 139 | 80 < ap_lo <= 89,
+    Hypertension 2: 140 < ap_hi <= 180 | 90 < ap_lo <= 120,
+    Hypertension crisis: 180 < ap_hi | 120 < ap_lo,
     
+    """
+    if (df["ap_hi"] < 120) and (df["ap_lo"] < 80):
+        return "Normal"
+    elif (120 <= df["ap_hi"] <= 129) and (df["ap_lo"] < 80):
+        return "Elevated"
+    elif (130 <= df["ap_hi"] <= 139) or (80 <= df["ap_lo"] <= 89):
+        return "Hypertension 1"
+    elif (140 <= df["ap_hi"] <= 180) or (90 <= df["ap_lo"] <= 120):
+        return "Hypertension 2"
+    elif (180 < df["ap_hi"]) or (120 < df["ap_lo"]):
+        return "Hypertension crisis"
+    else: 
+        return "Calculation-fault"
