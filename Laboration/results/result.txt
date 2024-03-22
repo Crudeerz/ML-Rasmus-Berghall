@@ -25,11 +25,11 @@ weighted avg       0.70      0.70      0.70     34184
 
 
 Best parameters for Random Forest-Categorical data:
- {'memory': None, 'steps': [('scaler', StandardScaler()), ('forest', RandomForestClassifier(n_estimators=160))], 'verbose': False, 'scaler': StandardScaler(), 'forest': RandomForestClassifier(n_estimators=160), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'forest__bootstrap': True, 'forest__ccp_alpha': 0.0, 'forest__class_weight': None, 'forest__criterion': 'gini', 'forest__max_depth': None, 'forest__max_features': 'sqrt', 'forest__max_leaf_nodes': None, 'forest__max_samples': None, 'forest__min_impurity_decrease': 0.0, 'forest__min_samples_leaf': 1, 'forest__min_samples_split': 2, 'forest__min_weight_fraction_leaf': 0.0, 'forest__monotonic_cst': None, 'forest__n_estimators': 160, 'forest__n_jobs': None, 'forest__oob_score': False, 'forest__random_state': None, 'forest__verbose': 0, 'forest__warm_start': False}
+ {'memory': None, 'steps': [('scaler', StandardScaler()), ('forest', RandomForestClassifier(n_estimators=150))], 'verbose': False, 'scaler': StandardScaler(), 'forest': RandomForestClassifier(n_estimators=150), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'forest__bootstrap': True, 'forest__ccp_alpha': 0.0, 'forest__class_weight': None, 'forest__criterion': 'gini', 'forest__max_depth': None, 'forest__max_features': 'sqrt', 'forest__max_leaf_nodes': None, 'forest__max_samples': None, 'forest__min_impurity_decrease': 0.0, 'forest__min_samples_leaf': 1, 'forest__min_samples_split': 2, 'forest__min_weight_fraction_leaf': 0.0, 'forest__monotonic_cst': None, 'forest__n_estimators': 150, 'forest__n_jobs': None, 'forest__oob_score': False, 'forest__random_state': None, 'forest__verbose': 0, 'forest__warm_start': False}
               precision    recall  f1-score   support
 
            0       0.66      0.73      0.69     17274
-           1       0.69      0.62      0.66     16910
+           1       0.69      0.63      0.66     16910
 
     accuracy                           0.68     34184
    macro avg       0.68      0.68      0.68     34184
@@ -61,9 +61,9 @@ weighted avg       0.73      0.73      0.72     34184
 
 
 Best parameters for Logistical Regression-Non Categorical data:
- {'memory': None, 'steps': [('scaler', StandardScaler()), ('log', LogisticRegression(l1_ratio=0.05263157894736842, max_iter=10000,
-                   penalty='elasticnet', solver='saga'))], 'verbose': False, 'scaler': StandardScaler(), 'log': LogisticRegression(l1_ratio=0.05263157894736842, max_iter=10000,
-                   penalty='elasticnet', solver='saga'), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'log__C': 1.0, 'log__class_weight': None, 'log__dual': False, 'log__fit_intercept': True, 'log__intercept_scaling': 1, 'log__l1_ratio': 0.05263157894736842, 'log__max_iter': 10000, 'log__multi_class': 'auto', 'log__n_jobs': None, 'log__penalty': 'elasticnet', 'log__random_state': None, 'log__solver': 'saga', 'log__tol': 0.0001, 'log__verbose': 0, 'log__warm_start': False}
+ {'memory': None, 'steps': [('scaler', StandardScaler()), ('log', LogisticRegression(l1_ratio=0.0, max_iter=10000, penalty='elasticnet',
+                   solver='saga'))], 'verbose': False, 'scaler': StandardScaler(), 'log': LogisticRegression(l1_ratio=0.0, max_iter=10000, penalty='elasticnet',
+                   solver='saga'), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'log__C': 1.0, 'log__class_weight': None, 'log__dual': False, 'log__fit_intercept': True, 'log__intercept_scaling': 1, 'log__l1_ratio': 0.0, 'log__max_iter': 10000, 'log__multi_class': 'auto', 'log__n_jobs': None, 'log__penalty': 'elasticnet', 'log__random_state': None, 'log__solver': 'saga', 'log__tol': 0.0001, 'log__verbose': 0, 'log__warm_start': False}
               precision    recall  f1-score   support
 
            0       0.71      0.78      0.74     17274
@@ -75,10 +75,10 @@ weighted avg       0.73      0.73      0.72     34184
 
 
 Best parameters for Random Forest-Non Categorical data:
- {'memory': None, 'steps': [('scaler', StandardScaler()), ('forest', RandomForestClassifier(n_estimators=180))], 'verbose': False, 'scaler': StandardScaler(), 'forest': RandomForestClassifier(n_estimators=180), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'forest__bootstrap': True, 'forest__ccp_alpha': 0.0, 'forest__class_weight': None, 'forest__criterion': 'gini', 'forest__max_depth': None, 'forest__max_features': 'sqrt', 'forest__max_leaf_nodes': None, 'forest__max_samples': None, 'forest__min_impurity_decrease': 0.0, 'forest__min_samples_leaf': 1, 'forest__min_samples_split': 2, 'forest__min_weight_fraction_leaf': 0.0, 'forest__monotonic_cst': None, 'forest__n_estimators': 180, 'forest__n_jobs': None, 'forest__oob_score': False, 'forest__random_state': None, 'forest__verbose': 0, 'forest__warm_start': False}
+ {'memory': None, 'steps': [('scaler', StandardScaler()), ('forest', RandomForestClassifier(n_estimators=150))], 'verbose': False, 'scaler': StandardScaler(), 'forest': RandomForestClassifier(n_estimators=150), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'forest__bootstrap': True, 'forest__ccp_alpha': 0.0, 'forest__class_weight': None, 'forest__criterion': 'gini', 'forest__max_depth': None, 'forest__max_features': 'sqrt', 'forest__max_leaf_nodes': None, 'forest__max_samples': None, 'forest__min_impurity_decrease': 0.0, 'forest__min_samples_leaf': 1, 'forest__min_samples_split': 2, 'forest__min_weight_fraction_leaf': 0.0, 'forest__monotonic_cst': None, 'forest__n_estimators': 150, 'forest__n_jobs': None, 'forest__oob_score': False, 'forest__random_state': None, 'forest__verbose': 0, 'forest__warm_start': False}
               precision    recall  f1-score   support
 
-           0       0.70      0.69      0.69     17274
+           0       0.70      0.70      0.70     17274
            1       0.69      0.69      0.69     16910
 
     accuracy                           0.69     34184
