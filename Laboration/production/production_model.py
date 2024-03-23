@@ -16,7 +16,7 @@ cm = confusion_matrix(y_test, y_pred)
 
 # Create and save ConfusionMatrix to folder
 ConfusionMatrixDisplay(cm).plot()
-plt.savefig(f"../production/_cm.png")
+plt.savefig(f"../production/result_cm.png")
 
 # Write results to result.txt
 with open("../production/result.txt", "a") as f:
